@@ -1,0 +1,2 @@
+CREATE ROLE books LOGIN PASSWORD 'BOOKS_password';
+ALTER DATABASE books OWNER TO books;

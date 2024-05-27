@@ -1,0 +1,16 @@
+{
+  "booksList" : [
+    {
+      "id": 1,
+      "title": "title1",
+      "author": "author1",
+      "categoryName": "category"
+    },
+    {
+      "id": 2,
+      "title": "title2",
+      "author": "author2",
+      "categoryName": "category"
+    }
+  ]
+}

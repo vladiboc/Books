@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /swagger
+
+spring:
+  application:
+    name: books
+  jpa:
+    generate-ddl: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/books?useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8
+    username: books
+    password: BOOKS_password
+    hikari:
+      schema: books_schema
+      connection-ini-sql: CREATE SCHEMA IF NOT EXISTS books_schema;
+      connection-timeout: 10000
+
+logging:
+  level:
+    org:
+      springframework: INFO
+      example:
+        books: INFO
