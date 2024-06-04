@@ -4,6 +4,7 @@ import org.example.books.dao.entity.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Интерфейс репозитория сущностей "книга"
@@ -16,5 +17,5 @@ public interface BookRepository extends JpaRepository<Book, Integer> {
    */
   List<Book> findAllByCategoryName(String categoryName);
 
-  Book findByTitleAndAuthor(String title, String author);
+  Optional<Book> findByTitleAndAuthor(String title, String author);
 }

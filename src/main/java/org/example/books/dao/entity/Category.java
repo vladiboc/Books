@@ -5,13 +5,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
 @NoArgsConstructor
 @Entity(name = "categories")
-public class Category {
+public class Category implements Serializable {
   @Id
   @Column(name = "category_name")
   private String name;

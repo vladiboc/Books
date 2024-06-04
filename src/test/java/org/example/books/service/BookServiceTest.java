@@ -27,7 +27,7 @@ class BookServiceTest {
     final Book expectedBook = new Book(1, "Приключения Тома Сойера", "Марк Твен", category);
 
     Mockito.when(this.bookRepository.findByTitleAndAuthor("Приключения Тома Сойера", "Марк Твен"))
-        .thenReturn(expectedBook);
+        .thenReturn(Optional.of(expectedBook));
 
     Book actualBook = this.bookService.findByTitleAndAuthor("Приключения Тома Сойера", "Марк Твен");
 

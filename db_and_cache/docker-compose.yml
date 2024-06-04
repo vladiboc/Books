@@ -1,5 +1,7 @@
 version: "3"
+
 services:
+
   books-db:
     image: postgres:12.3
     container_name: books-db
@@ -12,3 +14,8 @@ services:
     volumes:
       - ./init.sql/:/docker-entrypoint-initdb.d/
 
+  books-redis:
+    image: redis:7.0.4
+    container_name: redis-db
+    ports:
+      - "6379:6379"
